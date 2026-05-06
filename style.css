@@ -2043,3 +2043,11 @@ textarea:focus-visible {
   .attorneys .attorney-card:nth-child(2) { order: 1; }  /* Dan first */
   .attorneys .attorney-card:nth-child(3) { order: 3; }  /* Rip last */
 }
+
+/* Reorder practice cards on mobile: Estate Planning first, then Probate, then Small Business.
+   Desktop layout (Probate → Estate Planning → Small Business) is unchanged. */
+@media (max-width: 900px) {
+  #practice-areas .practice:nth-child(1) { order: 2; }  /* Probate & Administration → 2nd */
+  #practice-areas .practice:nth-child(2) { order: 1; }  /* Estate Planning → 1st */
+  #practice-areas .practice:nth-child(3) { order: 3; }  /* Small Business → 3rd */
+}
