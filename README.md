@@ -1,225 +1,206 @@
 # Daniel B. Faizakoff P.C. — Website
 
-A modern, maintenance-free static website for the firm.
+A modern, maintenance-free static website for the firm. Built as plain HTML/CSS so it deploys anywhere and stays editable by anyone with a text editor.
+
+**Live at:** https://legalesq.com
+
+---
 
 ## What's in this folder
 
 ```
-legalesq-site/
-├── index.html          Homepage
-├── style.css           Shared stylesheet for all pages
-├── practice-areas.html
-├── practice-areas/     Estate Planning, Probate, Business detail pages
-├── about.html
-├── about/              3 attorney profile pages
-├── contact.html        Contact page with Web3Forms
-├── blog.html           Blog listing
-├── blog/               26 individual blog post pages
-├── terms.html
-├── privacy.html
-├── disclaimers.html
-├── assets/             Images (logo, badges, attorney photos)
-└── README.md           This file
+legalesq.com/
+├── index.html                     Homepage
+├── about.html                     About the firm
+├── attorneys.html                 Attorneys landing
+├── practice-areas.html            Practice areas landing
+├── blog.html                      Blog listing
+├── contact.html                   Contact + Web3Forms-backed form
+│
+├── about/                         3 attorney profile pages
+│   ├── daniel-faizakoff.html
+│   ├── richard-wender.html
+│   └── ripal-gajjar.html
+│
+├── practice-areas/                3 practice detail pages
+│   ├── estate-planning.html
+│   ├── probate.html
+│   └── business.html
+│
+├── blog/                          26 individual blog post pages
+│
+├── terms.html                     Terms of use
+├── privacy.html                   Privacy policy
+├── disclaimers.html               Attorney advertising disclaimers
+├── 404.html                       Custom 404 page
+│
+├── style.css                      Shared stylesheet for every page
+├── sitemap.xml                    For search engines
+├── robots.txt                     For search engines
+├── site.webmanifest               PWA / favicon manifest
+│
+├── assets/                        Images (logo, lockup, badges, attorney photos, favicons)
+└── README.md                      This file
 ```
-
-## Before you deploy
-
-Two items need your action before the site goes live:
-
-### 1. Set up the Contact Form (Web3Forms)
-
-The contact form in `contact.html` is pre-wired to Web3Forms. You need to replace the placeholder access key with your real one.
-
-1. Go to https://web3forms.com
-2. Enter your email (e.g., `dbf@legalesq.com`) — they'll email you an access key
-3. Copy the access key from the email
-4. Open `contact.html` in a text editor
-5. Find this line (near the form):
-   ```
-   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-   ```
-6. Replace `YOUR_ACCESS_KEY_HERE` with your access key
-7. Save the file
-
-Form submissions will now arrive at the email you signed up with, with the subject line "New Inquiry from legalesq.com".
-
-### 2. Set up the Google Reviews Widget (Elfsight)
-
-The Reviews section on the homepage has a clearly-marked paste area for an Elfsight widget embed code.
-
-1. Go to https://elfsight.com/google-reviews-widget/
-2. Click **"Create Widget"** or **"Start for Free"**
-3. Sign up (email only — no credit card required on free tier)
-4. When prompted, **connect your Google Business Profile** — this is how the widget pulls your real reviews
-5. Search for your firm's listing and select it
-6. Customize the look. Suggested settings for this site:
-   - **Layout:** Grid (3 columns) or Slider
-   - **Show:** Rating stars, review count, review text, reviewer photo
-   - **Theme:** Light background to match the site
-   - **Width:** 100% (full-width inside the card)
-7. Once you're happy, click **"Add to Website"**. Elfsight will give you a snippet that looks like:
-   ```html
-   <script src="https://static.elfsight.com/platform/platform.js" async></script>
-   <div class="elfsight-app-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></div>
-   ```
-8. Open `index.html` in a text editor
-9. Find this block:
-   ```html
-   <!-- ============================================================ -->
-   <!-- PASTE ELFSIGHT EMBED CODE BETWEEN THESE COMMENT MARKERS -->
-   <!-- (see instructions in README.md) -->
-   <!-- ============================================================ -->
-
-   <div class="reviews-placeholder">
-     ...
-   </div>
-
-   <!-- ============================================================ -->
-   <!-- END ELFSIGHT EMBED AREA -->
-   <!-- ============================================================ -->
-   ```
-10. **Delete everything between the two marker blocks** (including the `<div class="reviews-placeholder">` and its content), and paste your Elfsight snippet in its place. The result should look like:
-    ```html
-    <!-- ============================================================ -->
-    <!-- PASTE ELFSIGHT EMBED CODE BETWEEN THESE COMMENT MARKERS -->
-    <!-- ============================================================ -->
-
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></div>
-
-    <!-- ============================================================ -->
-    <!-- END ELFSIGHT EMBED AREA -->
-    <!-- ============================================================ -->
-    ```
-11. Save the file.
-
-That's it. The reviews now load automatically on page view from any host.
-
-**Free tier limit:** 200 widget views per month. If your traffic exceeds that, Elfsight shows an upgrade prompt. Their paid tier is ~$6/month.
-
-### 3. Set up Google Analytics 4
-
-Every page is pre-wired with a Google Analytics tracking snippet, but the snippet uses a placeholder Measurement ID (`G-XXXXXXXXXX`). Replace it with your real one:
-
-1. Go to https://analytics.google.com and sign in with the Google account that owns (or will own) the firm's analytics
-2. Click **"Start measuring"** if it's a new account, or **Admin → Create → Property** if you already have GA
-3. Set property name (e.g., "Legalesq.com"), reporting timezone (Eastern Time), currency (USD)
-4. Choose business size and objectives — pick whatever fits
-5. Set up a **Web data stream**:
-   - Website URL: `https://legalesq.com`
-   - Stream name: `Legalesq Website`
-6. After creating the stream, GA shows you a **Measurement ID** that looks like `G-XXXXXXXXXX` (with real letters/numbers instead of X's). Copy it.
-7. **Search-and-replace in every HTML file** — the placeholder `G-XXXXXXXXXX` appears twice in each file's `<head>`. Easiest method:
-   - **VS Code / Sublime / Notepad++:** Use Find & Replace Across Files (Ctrl+Shift+H or Cmd+Shift+H)
-     - Find: `G-XXXXXXXXXX`
-     - Replace: `G-YOUR-REAL-ID`
-     - Apply to all files
-   - **Mac Terminal:** From inside the `legalesq-site` folder, run:
-     ```
-     find . -name "*.html" -exec sed -i '' 's/G-XXXXXXXXXX/G-YOUR-REAL-ID/g' {} +
-     ```
-   - **Windows PowerShell:** From inside the `legalesq-site` folder, run:
-     ```
-     Get-ChildItem -Recurse -Filter "*.html" | ForEach-Object { (Get-Content $_.FullName) -replace 'G-XXXXXXXXXX', 'G-YOUR-REAL-ID' | Set-Content $_.FullName }
-     ```
-8. Re-upload to your host. Tracking starts on the next page view.
-9. **Verify it's working:** Open your live site in one browser tab. In another tab, open Google Analytics → Reports → Realtime. You should see yourself listed as 1 active user within ~30 seconds.
-
-**Privacy note:** The snippet I added includes `anonymize_ip: true` which truncates visitor IP addresses before storage — generally considered a privacy best practice and helpful for GDPR/CCPA compliance.
-
-### 4. Set up the Newsletter Form (Mailchimp)
-
-The footer of every page has a "Sign up for Legally Speaking" form pre-wired for Mailchimp. You need to replace the placeholder form action URL with your real one.
-
-1. Sign in to Mailchimp at https://login.mailchimp.com
-2. Go to **Audience → Signup Forms → Embedded Forms** (top right "Audience" menu, then sub-menu)
-3. Pick the audience you want to add subscribers to
-4. Choose any layout (we don't use Mailchimp's HTML — we just need the form action URL)
-5. Look at the generated `<form action="...">` line in their code preview. The URL looks like:
-   ```
-   https://legalesq.us17.list-manage.com/subscribe/post?u=abc123&id=def456
-   ```
-   Note the `u=` value (your Mailchimp user ID) and `id=` value (your audience ID).
-6. Also note the hidden `b_xxxxxxxxxx_yyyy` field name in their snippet — this is the anti-spam honeypot for your specific list.
-7. **Now update your site files.** In every HTML file (40 files):
-   - Find: `YOUR_MAILCHIMP_FORM_ACTION`
-   - Replace with: the full URL from step 5
-   - Find: `name="b_PLACEHOLDER"`
-   - Replace with: `name="b_xxxxxxxxxx_yyyy"` (the actual hidden field name from step 6)
-
-   Easiest way (Mac Terminal, from inside legalesq-site folder):
-   ```
-   find . -name "*.html" -exec sed -i '' \
-     -e 's|YOUR_MAILCHIMP_FORM_ACTION|https://YOUR-FULL-URL-HERE|g' \
-     -e 's|name="b_PLACEHOLDER"|name="b_REAL-VALUE-HERE"|g' \
-     {} +
-   ```
-   Or use Find & Replace Across Files in VS Code / Sublime / Notepad++.
-8. Re-upload to your host. Subscribers added from the footer form will now appear in your Mailchimp audience.
-
-**Verify it works:** open the live site, scroll to the footer, enter a test email, click Subscribe. You should be redirected to Mailchimp's confirmation page, and the email should appear in your audience within a minute.
-
-**To customize the welcome email:** in Mailchimp, go to **Audience → Settings → Email and List Settings** to edit the confirmation email and double opt-in flow.
 
 ---
 
-## How to deploy it
+## What this site does well
 
-Choose **one** of the following free hosts. All three support custom domains like legalesq.com.
+- **Static HTML.** No build step, no Node, no framework. Open any file in a text editor, edit, save, re-upload.
+- **Fast.** Pages weigh under 30KB each plus the shared 60KB stylesheet. Loads on slow connections.
+- **Mobile-first.** Every page is fully responsive. A floating Call Now button appears on phones.
+- **SEO-optimized.** Every page has unique `<title>`, meta description, Open Graph tags, Twitter Card tags, canonical URL, and JSON-LD structured data. Sitemap and robots.txt at the root.
+- **Accessible.** Semantic HTML, alt text on every image, skip-to-content link, ARIA labels on icon-only buttons.
+- **Privacy-conscious.** Google Analytics is configured with `anonymize_ip: true`.
+- **Bidirectional internal linking.** Site pages link into the blog where keywords match, and blog posts deep-link into named anchor sections (`#why-plan-with-us`, `#special-situations`, etc.) on the practice pages. This is a deliberate SEO topic-cluster structure.
 
-### Option 1: Cloudflare Pages (recommended)
+---
 
-1. Go to https://pages.cloudflare.com/ and sign up for a free account
-2. Click **"Create a project"** → **"Upload assets"**
-3. Drag the entire `legalesq-site` folder onto the upload area
-4. Name it (e.g., `faizakoff`) and click **"Deploy site"**
-5. Within ~30 seconds, your site is live at `faizakoff.pages.dev`
-6. To use `legalesq.com`: go to **Custom domains** → **Set up a custom domain** → enter `legalesq.com` and follow their DNS instructions
+## Third-party integrations (already wired up)
 
-### Option 2: Netlify Drop (fastest, no signup)
+The following services are live and configured. No action needed unless you want to change settings.
 
-1. Go to https://app.netlify.com/drop
-2. Drag the unzipped `legalesq-site` folder onto the drop zone
-3. Instant live URL like `https://xyz.netlify.app`
-4. To connect your custom domain later, sign up for a free account
+### Contact form — Web3Forms
 
-### Option 3: GitHub Pages
+Located in `contact.html`. Submissions are emailed to the access-key holder's address. The access key is baked into the form's hidden `access_key` field. To change the destination email or settings, log in at https://web3forms.com.
 
-1. Create a free account at https://github.com
-2. Create a new repository
-3. Upload all files from this folder to the repo
-4. **Settings** → **Pages** → pick `main` branch → save
-5. Live at `yourusername.github.io/reponame` in ~1 minute
+### Newsletter — Mailchimp (Legally Speaking)
+
+Footer of every page. The form posts to a Mailchimp embedded-form endpoint with the firm's audience ID. To change which audience subscribers go to, edit the `<form action="...">` URL in the footer (it's repeated in every HTML file). Or to change once and propagate, search-and-replace across files:
+
+```bash
+# Mac / Linux
+find . -name "*.html" -exec sed -i '' 's|legalesq.us5.list-manage.com/subscribe/post?u=OLD-ID|legalesq.us5.list-manage.com/subscribe/post?u=NEW-ID|g' {} +
+```
+
+### Reviews — GatherUp
+
+Embedded on the homepage `index.html` in the Reviews section. The widget pulls live from Google Business Profile via GatherUp (`data-bid="139504"`). To change the widget, log in at https://app.gatherup.com.
+
+### Google Analytics 4
+
+Measurement ID `G-ZSM66VNQYK` is baked into every page's `<head>`. To change the property, search-and-replace across all HTML files.
+
+### Calendly
+
+The "Book a Consultation" buttons throughout the site open a Calendly popup pointing at `https://calendly.com/faizakoff/meeting-with-dan-faizakoff`. To change the destination, edit the Calendly URL in every HTML file (it appears multiple times per page).
+
+---
+
+## How to deploy
+
+The site is currently deployed via **GitHub Pages**. The standard workflow:
+
+1. Make your edits locally (or in GitHub's web editor).
+2. Commit and push to the `main` branch of the repo.
+3. GitHub Pages rebuilds and redeploys automatically within ~60 seconds.
+
+The custom domain `legalesq.com` is configured via DNS to point at GitHub Pages. The `CNAME` file at the repo root (if present in the live repo) anchors the domain to the build.
+
+### Drag-and-drop method
+
+When the firm's law-tech assistant sends an updated `.zip`:
+
+1. Unzip locally.
+2. Open the GitHub repo in a browser.
+3. Drag the unzipped files/folders directly into the repo's root via GitHub's web UI (or use `git pull` / `git push` if you're comfortable on the command line).
+4. Commit the change.
+5. The live site updates in about a minute.
 
 ---
 
 ## How to edit the site
 
-### Change text on any page
-Open the file in any text editor. Find the text, edit it, save. Re-upload to your host (or if you're using GitHub Pages, commit and push).
+### Change body text on a page
+
+Open the file in any text editor (VS Code, Sublime, Notepad++, or even GitHub's web editor). Search for the text you want to change, edit it, save, commit. Done.
 
 ### Change colors across the whole site
-Open `style.css`. Near the top, find:
+
+Open `style.css`. Near the top:
+
 ```css
 :root {
-  --red: #C8272C;
-  --blue: #1D3767;
-  --green: #5A9B3E;
+  --cerulean: #11A0B5;       /* primary accent (links, button backgrounds) */
+  --cerulean-dark: #0E8094;  /* hover state */
+  --navy: #1D3767;           /* headings, dark backgrounds */
+  --navy-dark: #142849;
+  --navy-deep: #0D1D38;
+  --text: #1A1A1A;
+  --text-muted: #5A5A5A;
+  /* ... */
 }
 ```
-Change those hex values. Everything across the site updates automatically.
+
+Edit those hex values. Every component on the site updates automatically.
 
 ### Add a new blog post
-1. Copy an existing post file in `blog/` (e.g., `blog/medical-aid-in-dying-act.html`) to a new filename
-2. Edit the new file — change the title in three places (the `<title>` tag, the hero eyebrow/heading, and the body)
-3. Open `blog.html` and add a new card at the top of the grid, copying the pattern of the existing cards
-4. Re-upload.
 
-### Replace a photo
-Just replace the file in `assets/` with a new file of the same name.
+1. Copy an existing post file in `blog/` (e.g., `blog/medical-aid-in-dying-act.html`) to a new filename. Use lowercase hyphenated slugs (e.g., `new-tax-rules-2026.html`).
+2. In the new file, update:
+   - `<title>` tag
+   - `<meta name="description">`
+   - The Open Graph and Twitter Card title/description meta tags
+   - The canonical URL (`<link rel="canonical">`)
+   - The `<h1>` headline and date in the hero
+   - The article body
+   - The "Related Reading" cards at the bottom (point to 2 sibling posts + 1 practice area)
+   - The previous/next post navigation at the very bottom
+   - The JSON-LD `BlogPosting` schema near the top of `<head>`
+3. Open `blog.html` and add a new `<article class="blog-card">` block at the top of the grid, copying the pattern of the existing cards.
+4. Add a new `<url>` entry to `sitemap.xml` with today's date.
+5. Commit and push.
+
+### Update an attorney photo
+
+Replace the file in `assets/` keeping the same filename (`dan.jpg`, `wender.jpg`, `rip.jpg`). Optimize to under 200KB before uploading. Recommended dimensions: 800px square or 800×1000 portrait.
+
+### Add a new practice area or attorney
+
+Larger structural changes — best to send those back to the firm's law-tech assistant rather than hand-editing. New top-level pages need to be added to:
+
+- The main `<nav>` menu (in every HTML file)
+- The mobile menu (in every HTML file)
+- The footer links (in every HTML file)
+- `sitemap.xml`
+- Cross-links from related pages
+- JSON-LD structured data where applicable
+
+That's a lot of consistent edits. The assistant can do it in one pass and ship a clean zip.
+
+---
+
+## SEO architecture (what's already in place)
+
+Every page includes:
+
+- Unique `<title>` and `<meta name="description">`
+- `<link rel="canonical">` pointing at `https://legalesq.com/...`
+- Open Graph tags (`og:type`, `og:url`, `og:title`, `og:description`, `og:image`, `og:site_name`)
+- Twitter Card tags (`twitter:card`, `twitter:url`, `twitter:title`, `twitter:description`, `twitter:image`)
+- JSON-LD structured data:
+  - Homepage: `LegalService` + `LocalBusiness` schema with both office addresses
+  - Attorney profiles: `Person` schema
+  - Blog posts: `BlogPosting` schema with author, datePublished, dateModified
+
+Blog posts cross-link to one another and to the practice-area pages on relevant keyword anchor text ("revocable trust," "beneficiary designations," "power of attorney," etc.) to build SEO topic clusters. The practice pages link back into the blog the same way.
+
+### Named anchor IDs
+
+The following section anchors exist for deep-linking from blog posts:
+
+- `/practice-areas/estate-planning.html#why-plan-with-us`
+- `/practice-areas/estate-planning.html#special-situations`
+- `/practice-areas/probate.html#why-hire-us`
+- `/practice-areas/business.html#why-founders-hire-us`
+
+Use these anchors when adding new blog posts that should drive traffic into a specific section of a practice page.
 
 ---
 
 ## Backup
 
-Keep a copy of this folder safe (Dropbox, Google Drive, external drive). If anything ever happens to your host, you can redeploy to any of the three options above in minutes.
+The GitHub repo is the source of truth. As long as the repo is intact, the site can be redeployed to any static host (Cloudflare Pages, Netlify, Vercel, S3, plain Apache) in minutes.
+
+For additional safety, keep an occasional `.zip` of the repo on Dropbox or Google Drive.

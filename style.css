@@ -495,7 +495,6 @@ h1, h2, h3, h4 {
   font-weight: 700;
   letter-spacing: -0.01em;
   margin-bottom: 0.75rem;
-  white-space: nowrap;
 }
 .pillar-card p {
   font-size: 0.92rem;
@@ -777,7 +776,7 @@ footer {
   .section { padding: 5rem 0; }
   .hero { padding: 8rem 0 4rem; }
   .brand-mark { height: 52px; }
-  .brand-lockup { height: 44px; }
+  .brand-lockup { height: 72px; }
   .brand-name { font-size: 1.1rem; }
   .brand-sub { font-size: 0.58rem; letter-spacing: 0.18em; }
   .badges-row { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
@@ -794,7 +793,7 @@ footer {
   .pillars { grid-template-columns: 1fr; }
   .brand-name { font-size: 0.95rem; }
   .brand-mark { height: 44px; }
-  .brand-lockup { height: 36px; }
+  .brand-lockup { height: 60px; }
   .stat-num { font-size: 2.5rem; }
   .stat-label { font-size: 0.7rem; letter-spacing: 0.12em; }
   .hero-stats { gap: 1.5rem 1rem; }
@@ -847,9 +846,10 @@ footer {
 /* Inner-page hero: navy but slightly shorter than homepage hero */
 .inner-hero { padding: 10rem 0 5rem; }
 .inner-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem) !important;
   max-width: 22ch !important;
 }
+.inner-hero h1 .accent-cerulean { color: #6FD8E8; }
 .inner-hero .hero-sub {
   max-width: 42rem !important;
   margin: 0 auto !important;
@@ -1697,6 +1697,25 @@ textarea:focus-visible {
 .mobile-menu-close svg { width: 24px; height: 24px; }
 
 @media (max-width: 900px) {
+  /* On mobile, the nav becomes: hamburger pinned right + logo centered in the
+     remaining whitespace to its left (NOT centered across the full bar). */
+  .nav {
+    padding: 0.6rem 0;
+  }
+  .nav-inner {
+    position: relative;
+    justify-content: center;
+    min-height: 72px;
+  }
+  .brand {
+    /* Hamburger is 44px wide + 1.25rem right padding = ~64px reserved on the right.
+       Center the brand in the remaining area: from 0 to (100% - 64px). */
+    position: absolute;
+    left: calc((100% - 64px) / 2);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
   .hamburger-btn {
     display: flex;
     align-items: center;
@@ -1708,7 +1727,11 @@ textarea:focus-visible {
     cursor: pointer;
     color: var(--navy);
     padding: 0;
-    margin-left: auto;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
   }
   .hamburger-btn svg { width: 28px; height: 28px; }
   .nav-cta { display: none; }
@@ -2050,3 +2073,279 @@ textarea:focus-visible {
   .attorneys .attorney-card:nth-child(2) { order: 1; }  /* Dan first */
   .attorneys .attorney-card:nth-child(3) { order: 3; }  /* Rip last */
 }
+
+/* ============================================================
+   v2 REWRITE — added components
+   ============================================================ */
+
+/* Hero CTA caption (homepage) */
+.hero-cta-caption {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: -2.5rem 0 3.5rem;
+  max-width: 36rem;
+}
+
+/* Inline blue text link */
+.inline-link {
+  color: var(--cerulean);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.inline-link:hover { border-bottom-color: var(--cerulean); }
+
+/* Inline links inside body prose */
+.prose-body a,
+.about-prose a,
+.practice-prose a,
+.attorney-prose a,
+.contact-prose a {
+  color: var(--cerulean);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(17, 160, 181, 0.25);
+  transition: border-color 0.2s;
+}
+.prose-body a:hover,
+.about-prose a:hover,
+.practice-prose a:hover,
+.attorney-prose a:hover,
+.contact-prose a:hover { border-bottom-color: var(--cerulean); }
+
+/* Pillar link */
+.pillar-link {
+  color: var(--cerulean);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.pillar-link:hover { border-bottom-color: var(--cerulean); }
+
+/* Why-Us section (homepage) */
+.why-us-section {
+  background: var(--off-white);
+  padding: 5rem 0 4.5rem;
+}
+.why-us-body {
+  max-width: 56rem;
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+.why-us-body p {
+  font-size: 1.075rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+}
+.why-us-body p:last-child { margin-bottom: 0; }
+.why-us-body strong { color: var(--navy); font-weight: 700; }
+
+/* Google reviews CTA below testimonials */
+.testimonials-google-cta {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+.testimonials-google-cta a {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.testimonials-google-cta a:hover { border-bottom-color: #fff; }
+
+/* Closing CTA (homepage + practice pages) */
+.closing-cta-section {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: #fff;
+  padding: 5rem 0 5.5rem;
+}
+.closing-cta-card {
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.closing-cta-card .eyebrow {
+  color: #fff;
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-transform: none;
+  margin-bottom: 1rem;
+}
+.closing-cta-card .eyebrow::before,
+.closing-cta-card .eyebrow::after { display: none; }
+.closing-cta-card h2 {
+  color: #fff;
+  margin: 0 0 1.5rem;
+}
+.closing-cta-card h2 .accent-cerulean { color: #6FD8E8; }
+.closing-cta-card p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 52rem;
+  margin: 0 auto 2.5rem;
+}
+.closing-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.btn-secondary:hover {
+  background: #fff;
+  color: var(--navy);
+  border-color: #fff;
+}
+
+/* Section-level "Why" / new-section blocks on inner pages */
+.why-section {
+  background: var(--off-white);
+  padding: 4rem 0 3.5rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.why-block-list {
+  max-width: 52rem;
+  margin: 2rem auto 0;
+}
+.why-block-item {
+  margin-bottom: 2rem;
+}
+.why-block-item:last-child { margin-bottom: 0; }
+.why-block-item h3 {
+  color: var(--navy);
+  font-size: 1.18rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+.why-block-item p {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* Special situations cards (Estate Planning page) */
+.special-situations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.special-situation-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--cerulean);
+  padding: 1.4rem 1.4rem 1.5rem;
+  border-radius: 4px;
+}
+.special-situation-card h4 {
+  color: var(--navy);
+  font-size: 1.05rem;
+  margin-bottom: 0.55rem;
+  font-weight: 700;
+}
+.special-situation-card p {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Mobile tweaks */
+@media (max-width: 700px) {
+  .hero-cta-caption { font-size: 0.86rem; margin: -2rem 0 3rem; }
+  .why-us-body p { font-size: 1rem; }
+  .closing-cta-card h2 { font-size: clamp(1.6rem, 5vw, 2rem); }
+  .closing-cta-card p { font-size: 1rem; }
+  .closing-cta-buttons .btn { width: 100%; justify-content: center; }
+  .special-situations { grid-template-columns: 1fr; }
+}
+
+/* From-the-blog strip (homepage) */
+.from-blog-section {
+  background: var(--off-white);
+  padding: 5rem 0 5.5rem;
+}
+.from-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem auto 2rem;
+  max-width: 1100px;
+}
+.from-blog-card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.75rem 1.5rem 1.85rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.from-blog-card:hover {
+  border-color: var(--cerulean);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(29, 55, 103, 0.10);
+}
+.from-blog-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cerulean);
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+.from-blog-card h3 {
+  color: var(--navy);
+  font-size: 1.18rem;
+  line-height: 1.3;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+.from-blog-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+}
+.from-blog-arrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cerulean);
+  font-weight: 600;
+}
+.from-blog-cta {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+.from-blog-cta a {
+  color: var(--cerulean);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.from-blog-cta a:hover { border-bottom-color: var(--cerulean); }
+
+/* Inline links inside the hero subline (dark navy background) */
+.hero-sub a,
+.inner-hero .hero-sub a {
+  color: #6FD8E8;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(111, 216, 232, 0.4);
+  transition: border-color 0.2s;
+}
+.hero-sub a:hover,
+.inner-hero .hero-sub a:hover { border-bottom-color: #6FD8E8; }

@@ -2,223 +2,229 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://legalesq.com/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://legalesq.com/about.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://legalesq.com/blog.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://legalesq.com/contact.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://legalesq.com/attorneys.html</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://legalesq.com/practice-areas.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://legalesq.com/blog.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://legalesq.com/contact.html</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://legalesq.com/about/daniel-faizakoff.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://legalesq.com/about/richard-wender.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://legalesq.com/about/ripal-gajjar.html</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://legalesq.com/practice-areas/business.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://legalesq.com/practice-areas/estate-planning.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://legalesq.com/practice-areas/probate.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://legalesq.com/practice-areas/business.html</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/a-guide-for-the-journey.html</loc>
-    <lastmod>2019-08-05</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/ancillary-estate-planning-documents.html</loc>
-    <lastmod>2020-03-10</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/announcing-our-newsletter.html</loc>
-    <lastmod>2019-02-05</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/breaking-news-kamalas-estate-tax-proposal.html</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/corporate-transparency-act-update.html</loc>
-    <lastmod>2025-01-04</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/digital-estate-planning-for-iphone-users.html</loc>
-    <lastmod>2021-12-28</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/dont-fail-to-plan.html</loc>
-    <lastmod>2019-04-01</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/important-developments-on-the-corporate-transparency-act-cta.html</loc>
-    <lastmod>2024-12-18</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/important-legal-update-corporate-transparency-act.html</loc>
-    <lastmod>2024-11-05</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/keep-your-estate-plan-current.html</loc>
-    <lastmod>2019-05-06</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/keep-your-original-will-safe-and-locatable.html</loc>
-    <lastmod>2019-06-03</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/live-your-life-plan-your-death-and-leave-a-legacy.html</loc>
-    <lastmod>2019-03-06</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/make-sure-to-designate-beneficiaries.html</loc>
-    <lastmod>2019-07-01</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/march-update-corporate-transparency-act-cta.html</loc>
-    <lastmod>2025-03-30</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/medical-aid-in-dying-act.html</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/new-tax-legislation-impacts-your-retirement-planning.html</loc>
-    <lastmod>2020-02-03</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/new-york-law-now-permits-transfer-on-death-deed.html</loc>
-    <lastmod>2024-07-28</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/new-york-state-temporarily-permits-virtual-will-signings.html</loc>
-    <lastmod>2020-04-13</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/power-of-attorney-basics.html</loc>
-    <lastmod>2021-07-20</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/sshhh-secret-protecting-business-non-disclosure-agreements.html</loc>
-    <lastmod>2018-01-18</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/the-new-york-law-power-of-attorney-law-has-been-updated.html</loc>
-    <lastmod>2021-06-11</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/what-if.html</loc>
-    <lastmod>2019-11-06</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/whats-in-a-name.html</loc>
-    <lastmod>2019-12-03</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/wills-vs-revocable-trusts.html</loc>
-    <lastmod>2019-09-03</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/you-cant-take-it-with-you.html</loc>
-    <lastmod>2019-10-10</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://legalesq.com/blog/youve-been-appointed-as-executor-or-administrator-now-what.html</loc>
-    <lastmod>2021-10-15</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
