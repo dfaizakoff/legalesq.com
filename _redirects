@@ -1,0 +1,99 @@
+# ============================================================
+# legalesq.com — 301 redirects from old WordPress URLs
+# Place this file at the repo root. Cloudflare Pages reads it
+# automatically on deploy. Rules are evaluated top to bottom;
+# the first match wins, so order matters (specific → general).
+# ============================================================
+
+# --- Old attorney profile pages (WordPress v2) → new bios ---
+/about/profiles/daniel-faizakoff/    /about/daniel-faizakoff.html    301
+/about/profiles/richard-h-wender/    /about/richard-wender.html      301
+/about/profiles/ripal-j-gajjar/      /about/ripal-gajjar.html        301
+/about/profiles/                     /attorneys.html                 301
+/about/profiles/:splat               /attorneys.html                 301
+
+# --- Old attorney profile pages (WordPress v1 - team-view theme slugs) ---
+/team-view/daniel-faizakoff/         /about/daniel-faizakoff.html    301
+/team-view/daniel-faizakoff          /about/daniel-faizakoff.html    301
+/team-view/richard-h-wender/         /about/richard-wender.html      301
+/team-view/richard-h-wender          /about/richard-wender.html      301
+/team-view/ripal-j-gajjar/           /about/ripal-gajjar.html        301
+/team-view/ripal-j-gajjar            /about/ripal-gajjar.html        301
+/team-view/:splat                    /attorneys.html                 301
+
+# --- Old About pages (both /about/ and /about-us/ generations) ---
+/about/philosophy/                   /about.html                     301
+/about-us/                           /about.html                     301
+/about-us/profiles/                  /attorneys.html                 301
+/about-us/philosophy/                /about.html                     301
+/about-us/testimonials/              /                               301
+/about-us/testimonials/:splat        /                               301
+/about-us/:splat                     /about.html                     301
+
+# --- Old PDFs of Dan's bio ---
+/wp-content/uploads/2018/05/Faizakoff-Bio.pdf       /about/daniel-faizakoff.html  301
+/wp-content/uploads/2020/01/Faizakoff-Bio-2020.pdf  /about/daniel-faizakoff.html  301
+
+# --- Old Practice Area sub-pages (WordPress v2) ---
+/practice-areas/business-corporate/business-formations/    /practice-areas/business.html  301
+/practice-areas/business-corporate/intellectual-property/  /practice-areas/business.html  301
+/practice-areas/business-corporate/:splat                  /practice-areas/business.html  301
+/practice-areas                                            /practice-areas.html           301
+/practice-areas/                                           /practice-areas.html           301
+/practice-areas/:splat                                     /practice-areas.html           301
+
+# --- Old Practice Area pages (WordPress v1 - services-view theme slugs) ---
+/services-view/business-formations/      /practice-areas/business.html         301
+/services-view/business-formations       /practice-areas/business.html         301
+/services-view/intellectual-property/    /practice-areas/business.html         301
+/services-view/intellectual-property     /practice-areas/business.html         301
+/services-view/business-transactions/    /practice-areas/business.html         301
+/services-view/business-transactions     /practice-areas/business.html         301
+/services-view/business-advisory/        /practice-areas/business.html         301
+/services-view/business-advisory         /practice-areas/business.html         301
+/services-view/contract-drafting/        /practice-areas/business.html         301
+/services-view/contract-drafting         /practice-areas/business.html         301
+/services-view/estate-planning/          /practice-areas/estate-planning.html  301
+/services-view/estate-planning           /practice-areas/estate-planning.html  301
+/services-view/:splat                    /practice-areas.html                  301
+
+# --- Old blog: specific sub-paths first, then slug redirect ---
+/blog/:slug/attachment/:rest             /blog.html                            301
+/blog/:slug/print/                       /blog.html                            301
+/blog/:slug/feed/                        /blog.html                            301
+/blog/:slug/                             /blog/:slug.html                      301
+
+# --- WordPress tag and category archives ---
+/tag/:splat                              /blog.html                            301
+/category/:splat                         /blog.html                            301
+
+# --- WordPress author archive (only Dan was ever an author) ---
+/author/danielfaizakoff/                 /about/daniel-faizakoff.html          301
+/author/danielfaizakoff                  /about/daniel-faizakoff.html          301
+/author/:splat                           /blog.html                            301
+
+# --- WordPress video archive ---
+/video/                                  /                                     301
+/video/:splat                            /                                     301
+
+# --- Old Press page (no replacement) ---
+/press/                                  /                                     301
+/press                                   /                                     301
+
+# --- Old Downloads page (no replacement) ---
+/downloads/                              /                                     301
+/downloads                               /                                     301
+
+# --- Old subdirectory install (legalesq.com/dbf/...) ---
+/dbf/:splat                              /                                     301
+
+# --- WordPress admin and internals (kill and forget) ---
+/wp-admin/:splat                         /                                     301
+/wp-content/:splat                       /                                     301
+/wp-includes/:splat                      /                                     301
+/wp-login.php                            /                                     301
+/wp-cron.php                             /                                     301
+
+# --- Old WordPress feed and search URLs ---
+/feed/                                   /blog.html                            301
+/feed                                    /blog.html                            301
