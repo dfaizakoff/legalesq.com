@@ -97,3 +97,66 @@
 # --- Old WordPress feed and search URLs ---
 /feed/                                   /blog.html                            301
 /feed                                    /blog.html                            301
+
+# --- Old root-level duplicate pages (pre-restructure cruft) -> canonical ---
+# These slugs were briefly published at the site root during the migration.
+# Canonical homes are /blog/, /practice-areas/, and /about/ (see sitemap.xml).
+# Both the clean and .html forms are redirected so no duplicate stays reachable.
+/a-guide-for-the-journey                                            /blog/a-guide-for-the-journey.html                                       301
+/a-guide-for-the-journey.html                                       /blog/a-guide-for-the-journey.html                                       301
+/ancillary-estate-planning-documents                                /blog/ancillary-estate-planning-documents.html                           301
+/ancillary-estate-planning-documents.html                           /blog/ancillary-estate-planning-documents.html                           301
+/announcing-our-newsletter                                          /blog/announcing-our-newsletter.html                                     301
+/announcing-our-newsletter.html                                     /blog/announcing-our-newsletter.html                                     301
+/breaking-news-kamalas-estate-tax-proposal                          /blog/breaking-news-kamalas-estate-tax-proposal.html                     301
+/breaking-news-kamalas-estate-tax-proposal.html                     /blog/breaking-news-kamalas-estate-tax-proposal.html                     301
+/business                                                           /practice-areas/business.html                                            301
+/business.html                                                      /practice-areas/business.html                                            301
+/corporate-transparency-act-update                                  /blog/corporate-transparency-act-update.html                             301
+/corporate-transparency-act-update.html                             /blog/corporate-transparency-act-update.html                             301
+/daniel-faizakoff                                                   /about/daniel-faizakoff.html                                             301
+/daniel-faizakoff.html                                              /about/daniel-faizakoff.html                                             301
+/digital-estate-planning-for-iphone-users                           /blog/digital-estate-planning-for-iphone-users.html                      301
+/digital-estate-planning-for-iphone-users.html                      /blog/digital-estate-planning-for-iphone-users.html                      301
+/dont-fail-to-plan                                                  /blog/dont-fail-to-plan.html                                             301
+/dont-fail-to-plan.html                                             /blog/dont-fail-to-plan.html                                             301
+/important-developments-on-the-corporate-transparency-act-cta       /blog/important-developments-on-the-corporate-transparency-act-cta.html  301
+/important-developments-on-the-corporate-transparency-act-cta.html  /blog/important-developments-on-the-corporate-transparency-act-cta.html  301
+/important-legal-update-corporate-transparency-act                  /blog/important-legal-update-corporate-transparency-act.html             301
+/important-legal-update-corporate-transparency-act.html             /blog/important-legal-update-corporate-transparency-act.html             301
+/keep-your-estate-plan-current                                      /blog/keep-your-estate-plan-current.html                                 301
+/keep-your-estate-plan-current.html                                 /blog/keep-your-estate-plan-current.html                                 301
+/keep-your-original-will-safe-and-locatable                         /blog/keep-your-original-will-safe-and-locatable.html                    301
+/keep-your-original-will-safe-and-locatable.html                    /blog/keep-your-original-will-safe-and-locatable.html                    301
+/live-your-life-plan-your-death-and-leave-a-legacy                  /blog/live-your-life-plan-your-death-and-leave-a-legacy.html             301
+/live-your-life-plan-your-death-and-leave-a-legacy.html             /blog/live-your-life-plan-your-death-and-leave-a-legacy.html             301
+/march-update-corporate-transparency-act-cta                        /blog/march-update-corporate-transparency-act-cta.html                   301
+/march-update-corporate-transparency-act-cta.html                   /blog/march-update-corporate-transparency-act-cta.html                   301
+/medical-aid-in-dying-act                                           /blog/medical-aid-in-dying-act.html                                      301
+/medical-aid-in-dying-act.html                                      /blog/medical-aid-in-dying-act.html                                      301
+/new-tax-legislation-impacts-your-retirement-planning               /blog/new-tax-legislation-impacts-your-retirement-planning.html          301
+/new-tax-legislation-impacts-your-retirement-planning.html          /blog/new-tax-legislation-impacts-your-retirement-planning.html          301
+/new-york-law-now-permits-transfer-on-death-deed                    /blog/new-york-law-now-permits-transfer-on-death-deed.html               301
+/new-york-law-now-permits-transfer-on-death-deed.html               /blog/new-york-law-now-permits-transfer-on-death-deed.html               301
+/new-york-state-temporarily-permits-virtual-will-signings           /blog/new-york-state-temporarily-permits-virtual-will-signings.html      301
+/new-york-state-temporarily-permits-virtual-will-signings.html      /blog/new-york-state-temporarily-permits-virtual-will-signings.html      301
+/power-of-attorney-basics                                           /blog/power-of-attorney-basics.html                                      301
+/power-of-attorney-basics.html                                      /blog/power-of-attorney-basics.html                                      301
+/probate                                                            /practice-areas/probate.html                                             301
+/probate.html                                                       /practice-areas/probate.html                                             301
+/ripal-gajjar                                                       /about/ripal-gajjar.html                                                 301
+/ripal-gajjar.html                                                  /about/ripal-gajjar.html                                                 301
+/sshhh-secret-protecting-business-non-disclosure-agreements         /blog/sshhh-secret-protecting-business-non-disclosure-agreements.html    301
+/sshhh-secret-protecting-business-non-disclosure-agreements.html    /blog/sshhh-secret-protecting-business-non-disclosure-agreements.html    301
+/the-new-york-law-power-of-attorney-law-has-been-updated            /blog/the-new-york-law-power-of-attorney-law-has-been-updated.html       301
+/the-new-york-law-power-of-attorney-law-has-been-updated.html       /blog/the-new-york-law-power-of-attorney-law-has-been-updated.html       301
+/what-if                                                            /blog/what-if.html                                                       301
+/what-if.html                                                       /blog/what-if.html                                                       301
+/whats-in-a-name                                                    /blog/whats-in-a-name.html                                               301
+/whats-in-a-name.html                                               /blog/whats-in-a-name.html                                               301
+/wills-vs-revocable-trusts                                          /blog/wills-vs-revocable-trusts.html                                     301
+/wills-vs-revocable-trusts.html                                     /blog/wills-vs-revocable-trusts.html                                     301
+/you-cant-take-it-with-you                                          /blog/you-cant-take-it-with-you.html                                     301
+/you-cant-take-it-with-you.html                                     /blog/you-cant-take-it-with-you.html                                     301
+/youve-been-appointed-as-executor-or-administrator-now-what         /blog/youve-been-appointed-as-executor-or-administrator-now-what.html    301
+/youve-been-appointed-as-executor-or-administrator-now-what.html    /blog/youve-been-appointed-as-executor-or-administrator-now-what.html    301

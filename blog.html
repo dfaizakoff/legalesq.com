@@ -3,102 +3,320 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found — Daniel B. Faizakoff P.C.</title>
-<meta name="description" content="The page you're looking for couldn't be found.">
+<title>Blog &mdash; Estate Planning, Probate &amp; Business Law Insights &mdash; Daniel B. Faizakoff P.C.</title>
+<meta name="description" content="Plain-English articles on estate planning, probate, powers of attorney, trusts, and business law from Daniel B. Faizakoff P.C., serving families and businesses in New York, New Jersey, and Connecticut.">
+
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <meta name="theme-color" content="#1D3767">
-<meta name="robots" content="noindex">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
-<style>
-  .err-wrap {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
-    color: var(--white);
-    text-align: center;
-    padding: 4rem 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .err-wrap::before {
-    content: "";
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-  }
-  .err-content { position: relative; z-index: 2; max-width: 720px; }
-  .err-code {
-    font-family: var(--font-display);
-    font-size: clamp(6rem, 18vw, 12rem);
-    font-weight: 700;
-    line-height: 1;
-    color: var(--white);
-    margin-bottom: 0;
-  }
-  .err-code .zero { color: var(--cerulean); font-style: italic; }
-  .err-eyebrow {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--cerulean);
-    margin-bottom: 1rem;
-  }
-  .err-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 700;
-    color: var(--white);
-    margin: 0.5rem 0 1.25rem;
-  }
-  .err-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 2.5rem;
-  }
-  .err-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .err-buttons .btn {
-    min-width: 200px;
-    justify-content: center;
-  }
-  .err-helpful {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.75);
-  }
-  .err-helpful a { color: var(--cerulean); font-weight: 600; }
-  .err-helpful a:hover { color: var(--white); }
-  .err-helpful ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 1rem 0 0;
-  }
-</style>
+
+<!-- SEO -->
+<link rel="canonical" href="https://legalesq.com/blog.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://legalesq.com/blog.html">
+<meta property="og:title" content="Blog &mdash; Estate Planning, Probate &amp; Business Law Insights &mdash; Daniel B. Faizakoff P.C.">
+<meta property="og:description" content="Plain-English articles on estate planning, probate, powers of attorney, trusts, and business law across NY, NJ, and CT.">
+<meta property="og:image" content="https://legalesq.com/assets/logo.png">
+<meta property="og:site_name" content="Daniel B. Faizakoff P.C.">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://legalesq.com/blog.html">
+<meta name="twitter:title" content="Blog &mdash; Daniel B. Faizakoff P.C.">
+<meta name="twitter:description" content="Plain-English articles on estate planning, probate, and business law across NY, NJ, and CT.">
+<meta name="twitter:image" content="https://legalesq.com/assets/logo.png">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Daniel B. Faizakoff P.C. Blog",
+  "url": "https://legalesq.com/blog.html",
+  "description": "Plain-English articles on estate planning, probate, and business law in New York, New Jersey, and Connecticut.",
+  "publisher": {
+    "@type": "LegalService",
+    "name": "Daniel B. Faizakoff P.C.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://legalesq.com/assets/logo.png"
+    }
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "What NY's Medical Aid in Dying Act Means for Your Estate Plan",
+      "url": "https://legalesq.com/blog/medical-aid-in-dying-act.html",
+      "datePublished": "2026-01-21",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "March 2025: FinCEN Exempts U.S. Domestic Companies from BOI Reporting",
+      "url": "https://legalesq.com/blog/march-update-corporate-transparency-act-cta.html",
+      "datePublished": "2025-03-30",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "January 2025: Federal Appeals Court Reinstates BOI Reporting",
+      "url": "https://legalesq.com/blog/corporate-transparency-act-update.html",
+      "datePublished": "2025-01-04",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "December 2024: Federal Court Halts the Corporate Transparency Act",
+      "url": "https://legalesq.com/blog/important-developments-on-the-corporate-transparency-act-cta.html",
+      "datePublished": "2024-12-18",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Corporate Transparency Act: What Small Business Owners Needed to Know",
+      "url": "https://legalesq.com/blog/important-legal-update-corporate-transparency-act.html",
+      "datePublished": "2024-11-05",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Harris-Warren Estate Tax Proposal: What It Would Do, If Enacted",
+      "url": "https://legalesq.com/blog/breaking-news-kamalas-estate-tax-proposal.html",
+      "datePublished": "2024-08-26",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "New York Now Permits Transfer on Death Deeds for Real Property",
+      "url": "https://legalesq.com/blog/new-york-law-now-permits-transfer-on-death-deed.html",
+      "datePublished": "2024-07-28",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Digital Estate Planning for iPhone Users: Apple's Digital Legacy Tool",
+      "url": "https://legalesq.com/blog/digital-estate-planning-for-iphone-users.html",
+      "datePublished": "2021-12-28",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "You've Been Appointed as Executor or Administrator — Now What?",
+      "url": "https://legalesq.com/blog/youve-been-appointed-as-executor-or-administrator-now-what.html",
+      "datePublished": "2021-10-15",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Power of Attorney Basics: Durable, Springing, and the Gray Area",
+      "url": "https://legalesq.com/blog/power-of-attorney-basics.html",
+      "datePublished": "2021-07-20",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "New York's Power of Attorney Has Been Updated — Here's What Changed",
+      "url": "https://legalesq.com/blog/the-new-york-law-power-of-attorney-law-has-been-updated.html",
+      "datePublished": "2021-06-11",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "When New York Temporarily Permitted Virtual Will Signings",
+      "url": "https://legalesq.com/blog/new-york-state-temporarily-permits-virtual-will-signings.html",
+      "datePublished": "2020-04-13",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Ancillary Estate Planning Documents: Why a Will Alone Isn't Enough",
+      "url": "https://legalesq.com/blog/ancillary-estate-planning-documents.html",
+      "datePublished": "2020-03-10",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The SECURE Act and Your Retirement Plans: What Changed",
+      "url": "https://legalesq.com/blog/new-tax-legislation-impacts-your-retirement-planning.html",
+      "datePublished": "2020-02-03",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "What's in a Name? Choosing the Right Fiduciaries for Your Estate Plan",
+      "url": "https://legalesq.com/blog/whats-in-a-name.html",
+      "datePublished": "2019-12-03",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "What If? Why Estate Plans Have to Anticipate the Unexpected",
+      "url": "https://legalesq.com/blog/what-if.html",
+      "datePublished": "2019-11-06",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "You Can't Take It With You: Specific Bequests, Memoranda, and No-Contest Clauses",
+      "url": "https://legalesq.com/blog/you-cant-take-it-with-you.html",
+      "datePublished": "2019-10-10",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Wills vs. Revocable Trusts: Which Do You Actually Need?",
+      "url": "https://legalesq.com/blog/wills-vs-revocable-trusts.html",
+      "datePublished": "2019-09-03",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "A Guide for the Journey: Why You Shouldn't DIY Your Estate Plan",
+      "url": "https://legalesq.com/blog/a-guide-for-the-journey.html",
+      "datePublished": "2019-08-05",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Make Sure to Designate Beneficiaries (Your Will Doesn't Reach Everything)",
+      "url": "https://legalesq.com/blog/make-sure-to-designate-beneficiaries.html",
+      "datePublished": "2019-07-01",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Keep Your Original Will Safe and Locatable",
+      "url": "https://legalesq.com/blog/keep-your-original-will-safe-and-locatable.html",
+      "datePublished": "2019-06-03",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Keep Your Estate Plan Current: Why Plans Go Stale",
+      "url": "https://legalesq.com/blog/keep-your-estate-plan-current.html",
+      "datePublished": "2019-05-06",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Don't Fail to Plan: What Happens When You Die Without a Will",
+      "url": "https://legalesq.com/blog/dont-fail-to-plan.html",
+      "datePublished": "2019-04-01",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Live Your Life, Plan Your Death, and Leave a Legacy",
+      "url": "https://legalesq.com/blog/live-your-life-plan-your-death-and-leave-a-legacy.html",
+      "datePublished": "2019-03-06",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Announcing Legally Speaking — Our Estate Planning & Business Newsletter",
+      "url": "https://legalesq.com/blog/announcing-our-newsletter.html",
+      "datePublished": "2019-02-05",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Protecting Your Business With Non-Disclosure Agreements (NDAs)",
+      "url": "https://legalesq.com/blog/sshhh-secret-protecting-business-non-disclosure-agreements.html",
+      "datePublished": "2018-01-18",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel B. Faizakoff"
+      }
+    }
+  ]
+}
+</script>
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSM66VNQYK"></script>
@@ -115,29 +333,321 @@
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main id="main-content" class="err-wrap">
-  <div class="err-content">
-    <div class="err-eyebrow">Error</div>
-    <h1 class="err-code">4<span class="zero">0</span>4</h1>
-    <h2 class="err-title">This page wandered off.</h2>
-    <p class="err-text">The page you were looking for doesn't exist, or it may have moved. Let's get you back on track.</p>
-
-    <div class="err-buttons">
-      <a href="/" class="btn">Return to Homepage</a>
-      <a href="contact.html" class="btn btn-navy">Contact Us</a>
-    </div>
-
-    <div class="err-helpful">
-      You may be looking for:
-      <ul>
-        <li><a href="practice-areas.html">Practice Areas</a></li>
-        <li><a href="about.html">About the Firm</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/" class="brand" aria-label="Daniel B. Faizakoff P.C. — Attorneys &amp; Counselors at Law">
+      <img src="assets/lockup.svg" alt="Daniel B. Faizakoff P.C. — Attorneys &amp; Counselors at Law" class="brand-lockup">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/attorneys.html">Attorneys</a></li>
+      <li><a href="/practice-areas.html">Practice Areas</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/faizakoff/meeting-with-dan-faizakoff'});return false;" class="btn btn-sm">
+        Book Consultation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="tel:+12126193100" class="btn btn-sm btn-navy">
+        (212) 619-3100
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      </a>
     </div>
   </div>
+    <button class="hamburger-btn" aria-label="Open menu" onclick="document.getElementById('mobileMenu').classList.add('is-open');document.getElementById('mobileMenuOverlay').classList.add('is-open');document.body.classList.add('menu-open');">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+</nav>
+<main id="main-content">
+
+<section class="hero inner-hero">
+  <div class="container hero-inner" style="text-align: center;">
+    <span class="eyebrow" style="justify-content: center;">Insights</span>
+    <h1 style="margin: 1.75rem auto 1.5rem; max-width: 16ch; font-size: clamp(2rem, 4.5vw, 3.75rem) !important;">From the Blog</h1>
+    <p style="max-width: 60ch; margin: 0 auto; color: var(--slate, #5a6781); font-size: 1.125rem; line-height: 1.7;">Plain-English explanations on the questions clients ask us most, on estate planning, probate, powers of attorney, trusts, and business law across New York, New Jersey, and Connecticut.</p>
+  </div>
+</section>
+
+<section class="section from-blog-section" style="padding-top: 2rem;">
+  <div class="container">
+    <div class="from-blog-grid">
+      <a href="/blog/medical-aid-in-dying-act.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; January 21, 2026</div>
+        <h3>What NY's Medical Aid in Dying Act Means for Your Estate Plan</h3>
+        <p>Governor Hochul agreed in December 2025 to sign New York's Medical Aid in Dying Act. A NY estate attorney explains what it does, the safeguards, and how it fits with your healthcare proxy and living will.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/march-update-corporate-transparency-act-cta.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Small Business &middot; March 30, 2025</div>
+        <h3>March 2025: FinCEN Exempts U.S. Domestic Companies from BOI Reporting</h3>
+        <p>A FinCEN interim final rule effectively ended CTA reporting for U.S. domestic small businesses. The current regime now applies only to foreign-formed reporting companies.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/corporate-transparency-act-update.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Small Business &middot; January 4, 2025</div>
+        <h3>January 2025: Federal Appeals Court Reinstates BOI Reporting</h3>
+        <p>On Dec. 23, 2024, the Fifth Circuit stayed the Texas injunction and reinstated CTA reporting &mdash; opening a brief, fast-moving compliance window. Here's what changed.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/important-developments-on-the-corporate-transparency-act-cta.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Small Business &middot; December 18, 2024</div>
+        <h3>December 2024: Federal Court Halts the Corporate Transparency Act</h3>
+        <p>On Dec. 3, 2024, a Texas federal district court issued a nationwide preliminary injunction freezing the CTA's BOI reporting requirement just before the Dec. 31 deadline.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/important-legal-update-corporate-transparency-act.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Small Business &middot; November 5, 2024</div>
+        <h3>The Corporate Transparency Act: What Small Business Owners Needed to Know</h3>
+        <p>The Corporate Transparency Act required most U.S. small businesses to file a Beneficial Ownership Information report. A NY business attorney explains what it required and the original Dec 31, 2024 deadline.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/breaking-news-kamalas-estate-tax-proposal.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; August 26, 2024</div>
+        <h3>The Harris-Warren Estate Tax Proposal: What It Would Do, If Enacted</h3>
+        <p>A look at the American Housing and Economic Mobility Act &mdash; the Harris-Warren estate tax proposal &mdash; and what it would mean for high-net-worth families if Congress ever revives it.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/new-york-law-now-permits-transfer-on-death-deed.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; July 28, 2024</div>
+        <h3>New York Now Permits Transfer on Death Deeds for Real Property</h3>
+        <p>New York's TOD Deed law lets you pass real property outside of probate while preserving the step-up in basis. A NY estate attorney explains how it works and when to use it.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/digital-estate-planning-for-iphone-users.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; December 28, 2021</div>
+        <h3>Digital Estate Planning for iPhone Users: Apple's Digital Legacy Tool</h3>
+        <p>iOS 15.2 added a Digital Legacy feature that lets you name people who can access your Apple data after you die. Here's how to set it up, why it matters, and how it fits a complete plan.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/youve-been-appointed-as-executor-or-administrator-now-what.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Probate &middot; October 15, 2021</div>
+        <h3>You've Been Appointed as Executor or Administrator — Now What?</h3>
+        <p>A practical guide to the duties of an executor or administrator in NY, NJ, and CT — from filing the will and opening an estate account to paying taxes and protecting yourself from liability.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/power-of-attorney-basics.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; July 20, 2021</div>
+        <h3>Power of Attorney Basics: Durable, Springing, and the Gray Area</h3>
+        <p>What a power of attorney is, what it does, and the dangerous gap between &ldquo;starting to slow down&rdquo; and &ldquo;legally incapacitated.&rdquo; A NY estate attorney explains.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/the-new-york-law-power-of-attorney-law-has-been-updated.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; June 11, 2021</div>
+        <h3>New York's Power of Attorney Has Been Updated &mdash; Here's What Changed</h3>
+        <p>On June 13, 2021, New York's overhauled POA law took effect: simpler form, no separate gift rider, expanded gifting authority, and real penalties for institutions that won't accept it.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/new-york-state-temporarily-permits-virtual-will-signings.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; April 13, 2020</div>
+        <h3>When New York Temporarily Permitted Virtual Will Signings</h3>
+        <p>During the early COVID-19 pandemic, Governor Cuomo issued an emergency order permitting remote will signings via video. A historical look at a temporary &mdash; and instructive &mdash; rule.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/ancillary-estate-planning-documents.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; March 10, 2020</div>
+        <h3>Ancillary Estate Planning Documents: Why a Will Alone Isn't Enough</h3>
+        <p>A complete estate plan goes beyond a will. Healthcare proxies, living wills, and durable powers of attorney protect you while you're alive. A NY attorney explains each document.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/new-tax-legislation-impacts-your-retirement-planning.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; February 3, 2020</div>
+        <h3>The SECURE Act and Your Retirement Plans: What Changed</h3>
+        <p>The SECURE Act eliminated the lifetime &ldquo;stretch IRA&rdquo; for most beneficiaries and pushed RMDs to 72. A NY estate attorney on what changed and what to do about it.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/whats-in-a-name.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; December 3, 2019</div>
+        <h3>What's in a Name? Choosing the Right Fiduciaries for Your Estate Plan</h3>
+        <p>Executors, trustees, and guardians make the most consequential calls in any estate plan. A NY estate attorney on the choices that matter most &mdash; and how to get them right.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/what-if.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; November 6, 2019</div>
+        <h3>What If? Why Estate Plans Have to Anticipate the Unexpected</h3>
+        <p>QTIPs, age-terminating trusts, and the airplane-crash scenario. A NY estate attorney on the &ldquo;what if&rdquo; thinking that turns a will into an actual plan.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/you-cant-take-it-with-you.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; October 10, 2019</div>
+        <h3>You Can't Take It With You: Specific Bequests, Memoranda, and No-Contest Clauses</h3>
+        <p>The watch, the painting, the engagement ring &mdash; small bequests can fracture families if mishandled. A NY estate attorney on memoranda, residuary estates, and in terrorem clauses.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/wills-vs-revocable-trusts.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; September 3, 2019</div>
+        <h3>Wills vs. Revocable Trusts: Which Do You Actually Need?</h3>
+        <p>Wills and revocable living trusts both pass assets to your loved ones, but they work very differently. A NY estate attorney explains when each makes sense and the privacy and probate trade-offs.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/a-guide-for-the-journey.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; August 5, 2019</div>
+        <h3>A Guide for the Journey: Why You Shouldn't DIY Your Estate Plan</h3>
+        <p>Why &ldquo;do-it-yourself&rdquo; estate planning fails most families. A NY estate attorney on the difference between an online template and counsel that knows you, your assets, and your tax picture.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/make-sure-to-designate-beneficiaries.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; July 1, 2019</div>
+        <h3>Make Sure to Designate Beneficiaries (Your Will Doesn't Reach Everything)</h3>
+        <p>Beneficiary designations on retirement accounts, life insurance, and TOD/POD accounts override your will. A NY estate attorney on the most-overlooked piece of every plan.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/keep-your-original-will-safe-and-locatable.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; June 3, 2019</div>
+        <h3>Keep Your Original Will Safe and Locatable</h3>
+        <p>Probate requires the original signed will, not a copy. A NY attorney on safe deposit boxes, attorney custody, and the simplest mistake that can derail an estate.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/keep-your-estate-plan-current.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; May 6, 2019</div>
+        <h3>Keep Your Estate Plan Current: Why Plans Go Stale</h3>
+        <p>An estate plan isn't a one-and-done document. Tax laws, family circumstances, and asset mixes all change. A NY estate attorney on when (and why) to revisit your plan.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/dont-fail-to-plan.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; April 1, 2019</div>
+        <h3>Don't Fail to Plan: What Happens When You Die Without a Will</h3>
+        <p>Estate planning is not just for the wealthy. Without a will, the state writes one for you under intestacy law. A NY estate attorney on what really happens when you fail to plan.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/live-your-life-plan-your-death-and-leave-a-legacy.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Estate Planning &middot; March 6, 2019</div>
+        <h3>Live Your Life, Plan Your Death, and Leave a Legacy</h3>
+        <p>We plan careers, vacations, and weddings &mdash; but rarely the one thing that affects everyone we love. A NY estate attorney on the meaning of legacy planning, and Ben Franklin.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/announcing-our-newsletter.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Firm News &middot; February 5, 2019</div>
+        <h3>Announcing Legally Speaking &mdash; Our Estate Planning &amp; Business Newsletter</h3>
+        <p>Daniel B. Faizakoff P.C. introduces &ldquo;Legally Speaking,&rdquo; the firm&rsquo;s periodic newsletter on estate planning, probate, and small business law &mdash; written for clients, by their lawyer.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+      <a href="/blog/sshhh-secret-protecting-business-non-disclosure-agreements.html" class="from-blog-card reveal">
+        <div class="from-blog-label">Business Law &middot; January 18, 2018</div>
+        <h3>Protecting Your Business With Non-Disclosure Agreements (NDAs)</h3>
+        <p>When does a non-disclosure agreement actually protect your business — and when is it the wrong tool? A NY business attorney explains what makes an NDA enforceable and what counts as a trade secret.</p>
+        <span class="from-blog-arrow">Read &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 </main>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/lockup.svg" alt="Daniel B. Faizakoff P.C." class="footer-brand-lockup">
+        </div>
+        <p class="footer-about">A boutique law firm counseling families and closely-held businesses on estate planning, probate, and corporate matters.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/Daniel-B-Faizakoff-PC-469825966364577/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12c0-6.6-5.4-12-12-12S0 5.4 0 12c0 6 4.4 11 10.1 11.9v-8.4H7.1V12h3v-2.3c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.3l-.5 3.5h-2.8v8.4C19.6 23 24 18 24 12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/daniel-b-faizakoff-3b8840" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          </a>
+          <a href="mailto:dbf@legalesq.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="/practice-areas/estate-planning.html">Estate Planning</a></li>
+          <li><a href="/practice-areas/probate.html">Estate Administration &amp; Probate</a></li>
+          <li><a href="/practice-areas/business.html">Small Business &amp; Corporate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Firm</h4>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/faizakoff/meeting-with-dan-faizakoff'});return false;" >Book a Consultation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Offices</h4>
+        <address>
+          <strong>New York</strong>
+          <a href="https://www.google.com/maps/search/?api=1&query=420+Lexington+Ave+Suite+2400+New+York+NY+10170" target="_blank" rel="noopener" class="address-link">
+            The Graybar Building<br>
+            420 Lexington Ave, Suite 2400<br>
+            New York, NY 10170
+          </a>
+        </address>
+        <address>
+          <strong>Stamford</strong>
+          <a href="https://www.google.com/maps/search/?api=1&query=112+Prospect+Street+3rd+Floor+Stamford+CT+06901" target="_blank" rel="noopener" class="address-link">
+            112 Prospect Street, 3rd Floor<br>
+            Stamford, CT 06901
+          </a>
+        </address>
+        <address>
+          <a href="tel:+12126193100" style="color:var(--cerulean);">(212) 619-3100</a><br>
+          <a href="mailto:dbf@legalesq.com" style="color:var(--cerulean);">dbf@legalesq.com</a>
+        </address>
+      </div>
+    </div>
+    
+<!-- Newsletter signup (Mailchimp) -->
+<div class="footer-newsletter">
+  <div class="newsletter-pitch">
+    <h3>Sign up for <em>Legally Speaking</em></h3>
+    <p>Periodic updates on estate planning, probate, and business law. No spam. Unsubscribe anytime.</p>
+  </div>
+  <div>
+    <form action="https://legalesq.us5.list-manage.com/subscribe/post?u=bf201e256177e82eb0cac117b&amp;id=c2f7089362&amp;f_id=009fbeedf0" method="post" target="_blank" novalidate class="newsletter-form">
+      <input type="email" name="EMAIL" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit" name="subscribe">Subscribe</button>
+      <!-- Mailchimp anti-bot field (do not remove or rename) -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_bf201e256177e82eb0cac117b_c2f7089362" tabindex="-1" value="">
+      </div>
+    </form>
+    <p class="newsletter-fineprint">By subscribing you agree to receive periodic emails from Daniel B. Faizakoff P.C. We will not share your information.</p>
+  </div>
+</div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Daniel B. Faizakoff P.C. · ATTORNEY ADVERTISING</span>
+      <span>
+        <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a> · <a href="/disclaimers.html">Disclaimers</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+
+<!-- Mobile-only floating Call Now button -->
+<a href="tel:+12126193100" class="mobile-call-float" aria-label="Call (212) 619-3100">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+</a>
 
 
 <!-- Mobile hamburger menu -->
