@@ -38,9 +38,7 @@
 /practice-areas/business-corporate/business-formations/    /practice-areas/business.html  301
 /practice-areas/business-corporate/intellectual-property/  /practice-areas/business.html  301
 /practice-areas/business-corporate/:splat                  /practice-areas/business.html  301
-/practice-areas                                            /practice-areas.html           301
-/practice-areas/                                           /practice-areas.html           301
-/practice-areas/:splat                                     /practice-areas.html           301
+/practice-areas/                                           /practice-areas                301
 
 # --- Old Practice Area pages (WordPress v1 - services-view theme slugs) ---
 /services-view/business-formations/      /practice-areas/business.html         301
