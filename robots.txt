@@ -1,4 +1,95 @@
+# robots.txt for legalesq.com
+# Daniel B. Faizakoff P.C.
+# Last updated: 2026.08.27
+#
+# Policy: this site is open to all search engine crawlers and to all
+# AI crawlers, including those used for AI-generated answers and for
+# model training. Content published here is public marketing material
+# and the firm wants it discoverable and citable everywhere.
+
+# --- Default: everything is allowed ---
+# Content-Signal affirmatively GRANTS all three declared uses. This is the
+# opposite of Cloudflare's Managed robots.txt, which declared ai-train=no.
+# Omitting a signal reads as neutral, so each one is stated explicitly.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+# --- Search engines (explicit for clarity) ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# --- AI answer engines and assistants ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: MistralAI-User
 Allow: /
 
 Sitemap: https://legalesq.com/sitemap.xml

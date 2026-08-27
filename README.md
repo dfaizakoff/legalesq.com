@@ -90,13 +90,15 @@ The "Book a Consultation" buttons throughout the site open a Calendly popup poin
 
 ## How to deploy
 
-The site is currently deployed via **GitHub Pages**. The standard workflow:
+The site is deployed via **Cloudflare Pages**. The standard workflow:
 
 1. Make your edits locally (or in GitHub's web editor).
 2. Commit and push to the `main` branch of the repo.
-3. GitHub Pages rebuilds and redeploys automatically within ~60 seconds.
+3. Cloudflare Pages rebuilds and redeploys automatically within ~60 seconds.
 
-The custom domain `legalesq.com` is configured via DNS to point at GitHub Pages. The `CNAME` file at the repo root (if present in the live repo) anchors the domain to the build.
+The domain `legalesq.com` is on Cloudflare (nameservers `renan.ns.cloudflare.com` and `katja.ns.cloudflare.com`), proxied, with the zone under the **faizakoff@gmail.com** Cloudflare account. Traffic is served from Cloudflare's edge, which is also why the `_redirects` file works and why extensionless URLs such as `/wills-vs-revocable-trusts` resolve.
+
+Note: this section previously said GitHub Pages. That was incorrect. GitHub Pages ignores `_redirects` entirely and does not serve extensionless URLs, so if it were true every one of the ~100 legacy WordPress redirects would be dead. Verified 2026.08.27 against live DNS, the Cloudflare-range A records, and a live fetch.
 
 ### Drag-and-drop method
 
