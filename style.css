@@ -1472,6 +1472,18 @@ textarea:focus-visible {
   /* Hide the colored icon backgrounds on practice cards */
   .practice-icon { display: none !important; }
 
+  /* Attorney profile: make the sidebar contact block print legibly */
+  .two-col .side-meta {
+    color: black !important;
+    font-size: 10pt;
+  }
+  .two-col .side-meta strong { color: black !important; }
+  .two-col .side-meta a { color: black !important; }
+  .attorney-contact {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
   /* Page setup */
   @page {
     margin: 0.75in;
